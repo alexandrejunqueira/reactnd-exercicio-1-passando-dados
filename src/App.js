@@ -120,6 +120,7 @@ class App extends Component {
 		const data = Object.keys(users).map(id => {
 			return {
         		userName: users[id].name,
+				userID: id,
         		favoriteMovies: profiles
         			.filter(profile => profile.userID === id)
         			.map(movie => movies[movie.favoriteMovieID].name)

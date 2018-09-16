@@ -6,11 +6,8 @@ class ListFavorites extends Component {
 			<ol>
 				{this.props.data.map(data => {
 					return (
-                 		<li>
-                 			{data.userName}
-							<ul>
-          						{data.favoriteMovies.map(movie => <li>{movie}</li>)}
-							</ul>
+                 		<li key={data.userID}>
+                 			{`${data.userName}'s favorite movies is: ${data.favoriteMovies.join(', ')}`} 
   						</li>
           			)
 				})}
